@@ -1,4 +1,5 @@
 import math
+import sys
 
 logsame = 0
 logsmall = 0
@@ -6,8 +7,8 @@ logbig = 0
 
 range_input = int(input("Enter a number. : "))
 for i in range(1, range_input + 1):
-    num_input = len(str(i))
-    num_log = len(str(math.log(i, 2)))
+    num_input = sys.getsizeof(str(i))
+    num_log = sys.getsizeof(str(math.log(i, 2)))
 
     if num_input == num_log:
         logsame += 1
